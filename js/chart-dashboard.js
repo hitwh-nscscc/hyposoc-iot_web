@@ -48,7 +48,7 @@ var cpuRateLine = new Chart($('#cpuRateLine'), {
             pointHoverRadius: 5,
             pointHoverBorderColor: "#fff",
             pointHoverBorderWidth: 1,
-            pointRadius: 0,
+            pointRadius: 0.1,
             pointHitRadius: 1,
             data: cpuRateLineData,
             spanGaps: false
