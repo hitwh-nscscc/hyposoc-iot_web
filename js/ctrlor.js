@@ -65,7 +65,7 @@ function getData() {
         cache: false,           //是否缓存结果
         type: "GET",            //请求方式
         dataType: "json",       //服务器返回的数据是什么类型
-        url: "http://localhost/ctrlor.php",
+        url: "iotctl.cgi",
         success: function (data) {
             $("#temperature").text((data.temp).toFixed(1));
             $("#humldlty").text((data.huml).toFixed(1));
