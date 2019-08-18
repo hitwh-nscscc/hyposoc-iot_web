@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Home</title>
+  <title>System Dashboard - HypoSoC IoT</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
@@ -50,7 +50,7 @@
         <li class="sidebar-list-item"><a href="ctrlor.html" class="sidebar-link text-muted"><i
               class="o-table-content-1 mr-3 text-gray"></i><span>SoC Control</span></a></li>
         <li class="sidebar-list-item"><a href="index.html" class="sidebar-link text-muted"><i
-          class="o-table-content-1 mr-3 text-gray"></i><span>Back to <</span></a></li>
+          class="o-paper-stack-1 mr-3 text-gray"></i><span>Back to <</span></a></li>
       </ul>
     </div>
     <div class="page-holder w-100 d-flex flex-wrap">
@@ -130,10 +130,10 @@
             <div class="col-lg-7 mb-4 mb-lg-0">
               <div class="card">
                 <div class="card-header">
-                  <h2 class="h6 text-uppercase mb-0">CPU使用率</h2>
+                  <h2 class="h6 text-uppercase mb-0">CPU usage rate</h2>
                 </div>
                 <div class="card-body">
-                  <p class="text-gray">CPU近期使用率统计</p>
+                  <p class="text-gray">CPU recently usage rate</p>
                   <div class="chart-holder">
                     <canvas id="cpuRateLine" style="max-height: 14rem !important;" class="w-100"></canvas>
                   </div>
@@ -148,7 +148,7 @@
                       <h2 class="mb-0 d-flex align-items-center"><span id="CPU-usr">0.0</span><span
                           class="dot bg-green d-inline-block ml-3"></span></h2><span
                         class="text-muted text-uppercase small">CPU-usr</span>
-                      <hr><small class="text-muted">CPU用户态进程使用率</small>
+                      <hr><small class="text-muted">CPU usage rate in user mode</small>
                     </div>
                     <div class="col-lg-7">
                       <canvas id="cpuUsrPie"></canvas>
@@ -163,7 +163,7 @@
                       <h2 class="mb-0 d-flex align-items-center"><span id="CPU-sys">0.0</span><span
                           class="dot bg-blue d-inline-block ml-3"></span></h2><span
                         class="text-muted text-uppercase small">CPU-sys</span>
-                      <hr><small class="text-muted">CPU核心态进程使用率</small>
+                      <hr><small class="text-muted">CPU usage rate in sys mode</small>
                     </div>
                     <div class="col-lg-7">
                       <canvas id="cpuSysPie"></canvas>
@@ -176,7 +176,7 @@
         </section>
         <section>
             <div class="jumbotron">
-                <h1>正在运行的程序</h1>
+                <h1>Monitor Process</h1>
                 <hr />
                 <table class="table card-text">
                     <thead>

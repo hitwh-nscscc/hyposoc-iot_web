@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Home</title>
+  <title>System Infomation - HypoSoC IoT</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
@@ -31,7 +31,7 @@
   <header class="header">
     <nav class="navbar navbar-expand-lg px-4 py-2 bg-white shadow"><a href="#"
         class="sidebar-toggler text-gray-500 mr-4 mr-lg-5 lead"><i class="fas fa-align-left"></i></a><a
-        href="index.html" class="navbar-brand font-weight-bold text-uppercase text-base">HypoSoC-IoT Dashboard</a>
+        href="index.html" class="navbar-brand font-weight-bold text-uppercase text-base">HypoSoC-IoT System Info</a>
       <ul class="ml-auto d-flex align-items-center list-unstyled mb-0">
         <li class="nav-item dropdown ml-auto"><img src="img/avatar.jpg"
               alt="Jason Doe" style="max-width: 2.5rem;" class="img-fluid rounded-circle shadow">
@@ -50,152 +50,81 @@
         <li class="sidebar-list-item"><a href="ctrlor.html" class="sidebar-link text-muted"><i
               class="o-table-content-1 mr-3 text-gray"></i><span>SoC Control</span></a></li>
         <li class="sidebar-list-item"><a href="index.html" class="sidebar-link text-muted"><i
-          class="o-table-content-1 mr-3 text-gray"></i><span>Back to <</span></a></li>
+          class="o-paper-stack-1 mr-3 text-gray"></i><span>Back to <</span></a></li>
       </ul>
     </div>
     <div class="page-holder w-100 d-flex flex-wrap">
       <div class="container-fluid px-xl-5">
         <section class="py-5">
-          <div class="row">
-            <div class="col-xl-3 col-lg-6 pb-4 mb-xl-0">
-              <div class="bg-white shadow roundy p-4 h-100 d-flex align-items-center justify-content-between">
-                <div class="flex-grow-1 d-flex align-items-center">
-                  <div class="dot mr-3 bg-violet"></div>
-                  <div class="text">
-                    <h6 class="mb-0">Mem-used</h6><span class="text-gray">
-                        <span id="Mem-used">145,14</span>
-                         KB</span>
-                  </div>
-                </div>
-                <div class="icon text-white bg-violet"><i class="fas fa-server"></i></div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 pb-4 mb-xl-0">
-              <div class="bg-white shadow roundy p-4 h-100 d-flex align-items-center justify-content-between">
-                <div class="flex-grow-1 d-flex align-items-center">
-                  <div class="dot mr-3 bg-green"></div>
-                  <div class="text">
-                    <h6 class="mb-0">Mem-free</h6><span class="text-gray">
-                        <span id="Mem-free">145,14</span>
-                         KB</span>
-                  </div>
-                </div>
-                <div class="icon text-white bg-green"><i class="far fa-clipboard"></i></div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 pb-4 mb-xl-0">
-              <div class="bg-white shadow roundy p-4 h-100 d-flex align-items-center justify-content-between">
-                <div class="flex-grow-1 d-flex align-items-center">
-                  <div class="dot mr-3 bg-blue"></div>
-                  <div class="text">
-                    <h6 class="mb-0">Mem-shrd</h6><span class="text-gray">
-                        <span id="Mem-shrd">145,14</span>
-                         KB</span>
-                  </div>
-                </div>
-                <div class="icon text-white bg-blue"><i class="fa fa-dolly-flatbed"></i></div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 pb-4 mb-xl-0">
-              <div class="bg-white shadow roundy p-4 h-100 d-flex align-items-center justify-content-between">
-                <div class="flex-grow-1 d-flex align-items-center">
-                  <div class="dot mr-3 bg-red"></div>
-                  <div class="text">
-                    <h6 class="mb-0">Mem-buff</h6><span class="text-gray">
-                        <span id="Mem-buff">145,14</span>
-                         KB</span>
-                  </div>
-                </div>
-                <div class="icon text-white bg-red"><i class="fas fa-receipt"></i></div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 pb-4 mb-xl-0">
-              <div class="bg-white shadow roundy p-4 h-100 d-flex align-items-center justify-content-between">
-                <div class="flex-grow-1 d-flex align-items-center">
-                  <div class="dot mr-3 bg-info"></div>
-                  <div class="text">
-                    <h6 class="mb-0">Mem-cache</h6><span class="text-gray">
-                        <span id="Mem-cache">145,14</span>
-                         KB</span>
-                  </div>
-                </div>
-                <div class="icon text-white bg-info"><i class="fas fa-receipt"></i></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div class="row mb-4">
-            <div class="col-lg-7 mb-4 mb-lg-0">
-              <div class="card">
-                <div class="card-header">
-                  <h2 class="h6 text-uppercase mb-0">CPU使用率</h2>
-                </div>
-                <div class="card-body">
-                  <p class="text-gray">CPU近期使用率统计</p>
-                  <div class="chart-holder">
-                    <canvas id="cpuRateLine" style="max-height: 14rem !important;" class="w-100"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-5 mb-4 mb-lg-0 pl-lg-0">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row align-items-center flex-row">
-                    <div class="col-lg-5">
-                      <h2 class="mb-0 d-flex align-items-center"><span id="CPU-usr">0.0</span><span
-                          class="dot bg-green d-inline-block ml-3"></span></h2><span
-                        class="text-muted text-uppercase small">CPU-usr</span>
-                      <hr><small class="text-muted">CPU用户态进程使用率</small>
-                    </div>
-                    <div class="col-lg-7">
-                      <canvas id="cpuUsrPie"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <div class="row align-items-center flex-row">
-                    <div class="col-lg-5">
-                      <h2 class="mb-0 d-flex align-items-center"><span id="CPU-sys">0.0</span><span
-                          class="dot bg-blue d-inline-block ml-3"></span></h2><span
-                        class="text-muted text-uppercase small">CPU-sys</span>
-                      <hr><small class="text-muted">CPU核心态进程使用率</small>
-                    </div>
-                    <div class="col-lg-7">
-                      <canvas id="cpuSysPie"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
             <div class="jumbotron">
-                <h1>正在运行的程序</h1>
+                <h1>System Informations</h1>
                 <hr />
-                <table class="table card-text">
-                    <thead>
+                <div class="row">
+                  <div class="col-md-6" style="text-align: center">
+                    <div class="pr-lg-5"><img src="img/cpu.svg" alt="" class="img-fluid"></div>
+                  </div>
+                  <table class="table card-text col-md-6">
+                      <tbody>
                         <tr>
-                          <th>PID</th>
-                          <th>PPID</th>
-                          <th>USER</th>
-                          <th>STAT</th>
-                          <th>VSZ</th>
-                          <th>VSZ %</th>
-                          <th>CPU</th>
-                          <th>CPU %</th>
-                          <th>COMMAND</th>
+                          <th>system type</th>
+                          <td id="systype">finding...</td>
                         </tr>
-                    </thead>
-                    <tbody id="procInfo">
-                        
-                    </tbody>
-                </table>
+                        <tr>
+                          <th>processor</th>
+                          <td id="processor">finding...</td>
+                        </tr>
+                        <tr>
+                          <th>cpu model</th>
+                          <td id="cpumd">finding...</td>
+                        </tr>
+                        <tr>
+                          <th>BogoMIPS</th>
+                          <td id="bogomips">finding...</td>
+                        </tr>
+                        <tr>
+                          <th>wait instruction</th>
+                          <td id="waitinst">finding...</td>
+                        </tr>
+                        <tr>
+                          <th>microsecond timers</th>
+                          <td id="microtimers">finding...</td>
+                        </tr>
+                        <tr>
+                          <th>tlb_entries</th>
+                          <td id="tlbentries">finding...</td>
+                        </tr>
+                        <tr>
+                          <th>extra interrupt vector</th>
+                          <td id="intvector">finding...</td>
+                        </tr>
+                        <tr>
+                          <th>hardware watchpoint</th>
+                          <td id="watchpoint">finding...</td>
+                        </tr>
+                        <tr>
+                          <th>ASEs implemented</th>
+                          <td id="ases">finding...</td>
+                        </tr>
+                        <tr>
+                          <th>shadow register sets</th>
+                          <td id="shadow">finding...</td>
+                        </tr>
+                        <tr>
+                          <th>core</th>
+                          <td id="core">finding...</td>
+                        </tr>
+                        <tr>
+                          <th>VCED exceptions</th>
+                          <td id="vced">finding...</td>
+                        </tr>
+                        <tr>
+                          <th>VCEI exceptions</th>
+                          <td id="vcei">finding...</td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <button class="btn btn-primary float-right" onclick="window.location.reload();">refresh</button>
             </div>
         </section>
       </div>
@@ -217,10 +146,8 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/popper.js/umd/popper.min.js"> </script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/sysInfo.js"></script>
   <script src="js/front.js"></script>
-  <script src="vendor/chart.js/Chart.min.js"></script>
-  <script src="js/chart-dashboard.js"></script>
-  <script src="js/dashboard.js"></script>
 </body>
 
 </html>
