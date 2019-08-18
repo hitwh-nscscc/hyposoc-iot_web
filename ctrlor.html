@@ -60,10 +60,18 @@
             <div class="col-lg-7 mb-4 mb-lg-0">
               <div class="card">
                 <div class="card-header">
-                  <h2 class="h6 text-uppercase mb-0">Temperature and Humldlty</h2>
+                  <h2 class="h6 text-uppercase mb-0">Change your light's light</h2>
                 </div>
                 <div class="card-body">
-
+                  <div>
+                      <h2 class="mb-1 d-flex align-items-center">
+                        <span id="light-rage">0</span>
+                      </h2>
+                  </div>
+                  <div>
+                    <label for="light-ctrl">Light Range</label>
+                    <input id="light-ctrl" type="range" class="custom-range" min="0" max="100" value="0">
+                  </div>
                 </div>
               </div>
             </div>
@@ -74,35 +82,95 @@
                 </div>
                 <div class="card-body">
                   <div class="row align-items-center flex-row">
-                    <div class="col-lg-5">
-                      <h2 class="mb-0 d-flex align-items-center"><span id="CPU-usr">0.0</span><span
+                    <div class="col-sm-6 pt-2">
+                      <h2 class="mb-0 d-flex align-items-center"><span id="temperature">0.0</span>℃<span
                           class="dot bg-green d-inline-block ml-3"></span></h2><span
                         class="text-muted text-uppercase small">Temperature</span>
-                      <hr><small class="text-muted">Temperature</small>
                     </div>
-                    <div class="col-lg-7">
-                        
+                    <div class="col-sm-6 pt-2">
+                      <h2 class="mb-0 d-flex align-items-center"><span id="humldlty">0.0</span>%<span
+                          class="dot bg-blue d-inline-block ml-3"></span></h2><span
+                        class="text-muted text-uppercase small">Humldlty</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="card-body">
-                  <div class="row align-items-center flex-row">
-                    <div class="col-lg-5">
-                      <h2 class="mb-0 d-flex align-items-center"><span id="CPU-sys">0.0</span><span
-                          class="dot bg-blue d-inline-block ml-3"></span></h2><span
-                        class="text-muted text-uppercase small">Humldlty</span>
-                      <hr><small class="text-muted">Humldlty</small>
-                    </div>
-                    <div class="col-lg-7">
 
+            </div>
+          </div>
+        </section>
+        <section>
+            <div class="row mb-4">
+              <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="h6 text-uppercase mb-0">Time to wake up</h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="bb-text">Input the massage to send:</label>
+                      <input id="bb-text" type="input" class="form-control mb-3">
+                      <button id="bb-ctrl" class="btn btn-primary float-right">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-4 mb-lg-0 pl-lg-0">
+                <div class="card mb-3">
+                  <div class="card-header">
+                    <h2 class="h6 text-uppercase mb-0">Play music</h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="row align-items-center flex-row">
+                      <div class="form-group">
+                        <button id="music-ctrl-1" class="btn btn-primary">music 1</button>
+                        <button id="music-ctrl-2" class="btn btn-primary">music 2</button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+        </section>
+        <section>
+            <div class="row mb-4">
+              <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="h6 text-uppercase mb-0">Door is open?</h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                        <div id="door-0" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                        <div id="door-1" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                        <div id="door-2" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                        <div id="door-3" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                        <div id="door-4" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                        <div id="door-5" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                        <div id="door-6" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                        <div id="door-7" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-4 mb-lg-0 pl-lg-0">
+                <div class="card mb-3">
+                  <div class="card-header">
+                    <h2 class="h6 text-uppercase mb-0">Show pictures</h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="row align-items-center flex-row">
+                        <div class="form-group">
+                          <button id="pic-ctrl-1" class="btn btn-primary">picture 1</button>
+                          <button id="pic-ctrl-2" class="btn btn-primary">picture 2</button>
+                          <button id="pic-ctrl-3" class="btn btn-danger">clear</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
         </section>
       </div>
       <footer class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100">
@@ -124,9 +192,7 @@
   <script src="vendor/popper.js/umd/popper.min.js"> </script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="js/front.js"></script>
-  <script src="vendor/chart.js/Chart.min.js"></script>
-  <script src="js/chart-dashboard.js"></script>
-  <script src="js/dashboard.js"></script>
+  <script src="js/ctrlor.js"></script>
 </body>
 
 </html>
