@@ -9,7 +9,7 @@ function sendData(type,data) {
         cache: false,           //是否缓存结果
         type: "POST",           //请求方式
         dataType: "text",       //服务器返回的数据是什么类型
-        url: "http://localhost/ctrlor.php",
+        url: "iotctl.cgi",
         data: {type: type,data: data},
         success: function (data) {
             return;
