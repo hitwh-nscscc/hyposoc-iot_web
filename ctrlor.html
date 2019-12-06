@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>System Dashboard - HypoSoC IoT</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome CSS-->
+  <link rel="stylesheet" href="fontawesome/css/all.css">
+  <!-- orion icons-->
+  <link rel="stylesheet" href="css/orionicons.css">
+  <!-- theme stylesheet-->
+  <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+  <!-- Custom stylesheet - for your changes-->
+  <link rel="stylesheet" href="css/custom.css">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="img/favicon.png?3">
+  <!-- Tweaks for older IEs-->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+
+<body>
+  <!-- navbar-->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg px-4 py-2 bg-white shadow"><a href="#"
+        class="sidebar-toggler text-gray-500 mr-4 mr-lg-5 lead"><i class="fas fa-align-left"></i></a><a
+        href="index.html" class="navbar-brand font-weight-bold text-uppercase text-base">HypoSoC-IoT SoC Controllor</a>
+      <ul class="ml-auto d-flex align-items-center list-unstyled mb-0">
+        <li class="nav-item dropdown ml-auto"><img src="img/avatar.jpg"
+              alt="Jason Doe" style="max-width: 2.5rem;" class="img-fluid rounded-circle shadow">
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="d-flex align-items-stretch">
+    <div id="sidebar" class="sidebar py-3">
+      <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">MAIN</div>
+      <ul class="sidebar-menu list-unstyled">
+        <li class="sidebar-list-item"><a href="dashboard.html" class="sidebar-link text-muted"><i
+              class="o-home-1 mr-3 text-gray"></i><span>Dashboard</span></a></li>
+        <li class="sidebar-list-item"><a href="sysinfo.html" class="sidebar-link text-muted"><i
+              class="o-sales-up-1 mr-3 text-gray"></i><span>System Info</span></a></li>
+        <li class="sidebar-list-item"><a href="ctrlor.html" class="sidebar-link text-muted active"><i
+              class="o-table-content-1 mr-3 text-gray"></i><span>SoC Control</span></a></li>
+        <li class="sidebar-list-item"><a href="index.html" class="sidebar-link text-muted"><i
+          class="o-paper-stack-1 mr-3 text-gray"></i><span>Back to <</span></a></li>
+      </ul>
+    </div>
+    <div class="page-holder w-100 d-flex flex-wrap">
+      <div class="container-fluid px-xl-5">
+        <section class="py-5">
+          <div class="row mb-4">
+            <div class="col-lg-7 mb-4 mb-lg-0">
+              <div class="card">
+                <div class="card-header">
+                  <h2 class="h6 text-uppercase mb-0">Change your light's light</h2>
+                </div>
+                <div class="card-body">
+                  <div>
+                      <h2 class="mb-1 d-flex align-items-center">
+                        <span id="light-rage">0</span>
+                      </h2>
+                  </div>
+                  <div>
+                    <label for="light-ctrl">Light Range</label>
+                    <input id="light-ctrl" type="range" class="custom-range" min="0" max="100" value="0">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 mb-4 mb-lg-0 pl-lg-0">
+              <div class="card mb-3">
+                <div class="card-header">
+                  <h2 class="h6 text-uppercase mb-0">Temperature and Humldlty</h2>
+                </div>
+                <div class="card-body">
+                  <div class="row align-items-center flex-row">
+                    <div class="col-sm-6 pt-2">
+                      <h2 class="mb-0 d-flex align-items-center"><span id="temperature">0.0</span>℃<span
+                          class="dot bg-green d-inline-block ml-3"></span></h2><span
+                        class="text-muted text-uppercase small">Temperature</span>
+                    </div>
+                    <div class="col-sm-6 pt-2">
+                      <h2 class="mb-0 d-flex align-items-center"><span id="humldlty">0.0</span>%<span
+                          class="dot bg-blue d-inline-block ml-3"></span></h2><span
+                        class="text-muted text-uppercase small">Humldlty</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <section>
+            <div class="row mb-4">
+              <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="h6 text-uppercase mb-0">Time to wake up</h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="bb-text">Input the massage to send:</label>
+                      <input id="bb-text" type="input" class="form-control mb-3">
+                      <button id="bb-ctrl" class="btn btn-primary float-right">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-4 mb-lg-0 pl-lg-0">
+                <div class="card mb-3">
+                  <div class="card-header">
+                    <h2 class="h6 text-uppercase mb-0">Play music</h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="row align-items-center flex-row">
+                      <div class="form-group">
+                        <button id="music-ctrl-1" class="btn btn-primary">music 1</button>
+                        <button id="music-ctrl-2" class="btn btn-primary">music 2</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section>
+            <div class="row mb-4">
+              <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="h6 text-uppercase mb-0">Door is open?</h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                        <div id="door-0" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                        <div id="door-1" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                        <div id="door-2" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                        <div id="door-3" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                        <div id="door-4" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                        <div id="door-5" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                        <div id="door-6" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                        <div id="door-7" class="icon icon-lg shadow mr-3 bg-secondary text-white"><i class="fas fa-door-open"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-4 mb-lg-0 pl-lg-0">
+                <div class="card mb-3">
+                  <div class="card-header">
+                    <h2 class="h6 text-uppercase mb-0">Show pictures</h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="row align-items-center flex-row">
+                        <div class="form-group">
+                          <button id="pic-ctrl-1" class="btn btn-primary">picture 1</button>
+                          <button id="pic-ctrl-2" class="btn btn-primary">picture 2</button>
+                          <button id="pic-ctrl-3" class="btn btn-danger">clear</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        </section>
+      </div>
+      <footer class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-left text-primary">
+              <p class="mb-2 mb-md-0"></p>
+            </div>
+            <div class="col-md-6 text-center text-md-right text-gray-400">
+              <p class="mb-0">Copyright &copy; 2019.Hypothetic CPU Team All rights reserved. Powered by BUBBLY DASHBOARD.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!-- JavaScript files-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/popper.js/umd/popper.min.js"> </script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/front.js"></script>
+  <script src="js/ctrlor.js"></script>
+</body>
+
+</html>
